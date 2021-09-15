@@ -12,6 +12,7 @@
   <body>
     <header>
       <% if user_signed_in? %>
+        <%= current_user.name %>でログイン中
         <%= link_to "My Page", user_path(current_user) %>
         <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
       <% else %>
